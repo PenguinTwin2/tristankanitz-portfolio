@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Gill Sans', sans-serif;
+    line-height: 1.6;
+    color: #dcedff;
+    background-color: #343f3e;
+}
+
+a {
+    color: #dcedff;
+    background-color: #4b6fa7;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #16bb92;
+    background-color: #4b6fa7;
+    text-decoration: underline;
+}
