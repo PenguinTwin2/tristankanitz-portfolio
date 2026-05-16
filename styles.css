@@ -11,6 +11,11 @@ h2 {
     font-size: 2rem;
 }
 
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
 body {
     font-family: 'Gill Sans', sans-serif;
     line-height: 1.6;
@@ -71,12 +76,11 @@ section {
 }
 
 section p {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 section ul {
     display: flex;
-    justify-content: center;
     list-style: none;
     padding: 0.5rem 0;
 }
@@ -89,12 +93,38 @@ section ul li {
 section ul li a {
     color: #dcedff;
     background-color: #4b6fa7;
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-decoration: none;
     transition: font-size 0.3s, color 0.3s;  /* transitions to a:hover */
 }
 
 section ul li a:hover {
+    color: #16bb92;
+    background-color: #4b6fa7;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.home ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0.5rem 0;
+}
+
+.home ul li {
+    margin: 0 1rem;
+}
+
+.home ul li a {
+    color: #dcedff;
+    background-color: #4b6fa7;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: font-size 0.3s, color 0.3s;
+}
+
+.home ul li a:hover {
     color: #16bb92;
     background-color: #4b6fa7;
     font-size: 2rem;
