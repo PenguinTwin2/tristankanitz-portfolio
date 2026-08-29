@@ -161,21 +161,21 @@ main {
 }
 
 
-/* ===== Bio Section ===== */
+/* ===== About Section ===== */
 
 
-.bio-section {
+.about-section {
     margin-bottom: 2rem;
     background-color: var(--secondary-bg);
     padding: 1.5rem;
     border-radius: 8px;
 }
 
-.bio-content {
+.about-content {
     margin-top: 1rem;
 }
 
-.bio-content p {
+.about-content p {
     margin-bottom: 1rem;
 }
 
