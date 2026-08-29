@@ -152,7 +152,7 @@ main {
     height: calc(100vh - var(--header-height));
     min-height: 520px;
     overflow: hidden;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     border-radius: 4px;
     border: 1px solid var(--border-color);
 }
@@ -239,8 +239,8 @@ p {
 .about-section,
 .music-section,
 .contact-section {
-    margin-bottom: 4.5rem;
-    padding: 0 2rem;
+    margin: 2rem 0;
+    padding: 1rem 2rem;
 }
 
 /* About Layout with Portrait */
