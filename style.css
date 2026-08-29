@@ -5,12 +5,12 @@
    ========================================================================== */
 :root {
     --bg-color: #111111;
-    --card-bg: #181818;
-    --table-header-bg: #1c1c1c;
-    --table-row-alt: #151515;
-    --text-primary: #f0f0f0;
-    --text-secondary: #999999;
-    --accent: #ffffff;
+    --card-bg-color: #181818;
+    --table-header-bg-color: #1c1c1c;
+    --table-row-alt-color: #151515;
+    --text-1st-color: #f0f0f0;
+    --text-2nd-color: #999999;
+    --accent-color: #ffffff;
     --border-color: #262626;
     --font-heading: 'Playfair Display', Georgia, serif;
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -34,7 +34,7 @@ body {
     font-family: var(--font-body);
     font-size: 15px;
     line-height: 1.7;
-    color: var(--text-primary);
+    color: var(--text-1st-color);
     background-color: var(--bg-color);
     font-weight: 300;
     display: flex;
@@ -49,7 +49,7 @@ a {
 }
 
 a:hover {
-    color: var(--accent);
+    color: var(--accent-color);
     opacity: 0.8;
 }
 
@@ -86,7 +86,7 @@ a:hover {
 }
 
 .site-title a {
-    color: var(--text-primary);
+    color: var(--text-1st-color);
 }
 
 /* Hidden checkbox mechanism to toggle mobile sidebar without JS */
@@ -98,7 +98,7 @@ a:hover {
     display: none;
     font-size: 1.25rem;
     cursor: pointer;
-    color: var(--text-primary);
+    color: var(--text-1st-color);
 }
 
 .nav-menu ul {
@@ -111,14 +111,14 @@ a:hover {
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    color: var(--text-secondary);
+    color: var(--text-2nd-color);
     position: relative;
     padding-bottom: 4px;
 }
 
 .nav-menu ul li a:hover,
 .nav-menu ul li a.active {
-    color: var(--text-primary);
+    color: var(--text-1st-color);
 }
 
 .nav-menu ul li a.active::after {
@@ -128,7 +128,7 @@ a:hover {
     left: 0;
     width: 100%;
     height: 1px;
-    background-color: var(--text-primary);
+    background-color: var(--text-1st-color);
 }
 
 /* ==========================================================================
@@ -147,6 +147,10 @@ main {
    ========================================================================== */
 .hero-banner {
     position: relative;
+    background-image: url(images/banner.jpg);
+    background-position: center 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
     /* % = Relative to the parent element (in this case, main) */
     width: 100%;
     /* Spans the full height of desktop screen; vh = Relative to 1% of the height of the viewport */
@@ -154,7 +158,7 @@ main {
     min-height: 520px;
     overflow: hidden;
     margin-top: calc(-1 * var(--header-height));
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
     border-radius: 4px;
     border: 1px solid var(--border-color);
 }
@@ -175,14 +179,14 @@ main {
     background-color: rgba(17, 17, 17, 0.5);
     backdrop-filter: blur(8px);
     padding: 1.75rem 2rem;
-    border-left: 2px solid var(--text-primary);
+    border-left: 2px solid var(--text-1st-color);
     max-width: 500px;
 }
 
 .hero-caption h1 {
     font-family: var(--font-heading);
     font-size: 2.2rem;
-    color: var(--text-primary);
+    color: var(--text-1st-color);
     font-weight: 400;
     line-height: 1.2;
     margin-bottom: 1.25rem;
@@ -198,15 +202,15 @@ main {
     text-transform: uppercase;
     letter-spacing: 0.12em;
     color: var(--bg-color);
-    background-color: var(--text-primary);
-    border: 1px solid var(--text-primary);
+    background-color: var(--text-1st-color);
+    border: 1px solid var(--text-1st-color);
     border-radius: 2px;
     font-weight: 500;
 }
 
 .hero-btn:hover {
     background-color: transparent;
-    color: var(--text-primary);
+    color: var(--text-1st-color);
     opacity: 1;
 }
 
@@ -221,7 +225,7 @@ h2 {
     margin-bottom: 1.75rem;
     padding-bottom: 0.75rem;
     border-bottom: 1px solid var(--border-color);
-    color: var(--text-primary);
+    color: var(--text-1st-color);
 }
 
 h3 {
@@ -229,20 +233,21 @@ h3 {
     font-size: 1.15rem;
     font-style: italic;
     font-weight: 400;
-    color: var(--text-primary);
+    color: var(--text-1st-color);
     margin: 2rem 0 1rem;
 }
 
 p {
     margin-bottom: 1.25rem;
-    color: var(--text-secondary);
+    color: var(--text-2nd-color);
 }
 
 .about-section,
 .music-section,
 .contact-section {
-    margin: 2rem 0;
-    padding: 1rem 2rem;
+    /* margin: 2rem 0; */
+    padding: 2rem 2rem 1rem;
+    background-color: var(--card-bg-color);
 }
 
 /* About Layout with Portrait */
@@ -251,7 +256,7 @@ p {
     grid-template-columns: 280px 1fr;
     gap: 2.5rem;
     align-items: start;
-    margin-top: 1rem;
+    margin: 1rem 0;
 }
 
 .about-portrait img {
@@ -269,9 +274,9 @@ p {
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    border-bottom: 1px solid var(--text-primary);
+    border-bottom: 1px solid var(--text-1st-color);
     padding-bottom: 2px;
-    color: var(--text-primary);
+    color: var(--text-1st-color);
 }
 
 /* ==========================================================================
@@ -280,7 +285,7 @@ p {
 .table-responsive {
     width: 100%;
     overflow-x: auto;
-    margin-top: 1.5rem;
+    margin: 1.5rem 0;
     border: 1px solid var(--border-color);
     border-radius: 4px;
 }
@@ -305,7 +310,7 @@ p {
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    color: var(--text-primary);
+    color: var(--text-1st-color);
     font-weight: 600;
 }
 
@@ -314,7 +319,7 @@ p {
 }
 
 .works-table tbody tr:nth-child(even) {
-    background-color: var(--table-row-alt);
+    background-color: var(--table-row-alt-color);
 }
 
 .works-table tbody tr:hover {
@@ -322,11 +327,11 @@ p {
 }
 
 .works-table td {
-    color: var(--text-secondary);
+    color: var(--text-2nd-color);
 }
 
 .works-table td.work-title {
-    color: var(--text-primary);
+    color: var(--text-1st-color);
     font-weight: 400;
 }
 
@@ -341,14 +346,14 @@ p {
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: var(--text-secondary);
+    color: var(--text-2nd-color);
     display: inline-flex;
     align-items: center;
     gap: 0.3rem;
 }
 
 .work-media-links a:hover {
-    color: var(--text-primary);
+    color: var(--text-1st-color);
 }
 
 /* ==========================================================================
@@ -359,19 +364,19 @@ p {
     display: flex;
     flex-direction: column;
     gap: 0.85rem;
-    margin-top: 1rem;
+    margin: 1rem 0;
 }
 
 .contact-links li a {
     font-size: 0.95rem;
-    color: var(--text-secondary);
+    color: var(--text-2nd-color);
     display: inline-flex;
     align-items: center;
     gap: 0.6rem;
 }
 
 .contact-links li a:hover {
-    color: var(--text-primary);
+    color: var(--text-1st-color);
 }
 
 /* ==========================================================================
@@ -379,7 +384,6 @@ p {
    ========================================================================== */
 .site-footer {
     border-top: 1px solid var(--border-color);
-    background-color: #0d0d0d;
     padding: 3.5rem 2rem;
     margin-top: auto;
 }
@@ -404,19 +408,19 @@ p {
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--text-secondary);
+    color: var(--text-2nd-color);
     display: inline-flex;
     align-items: center;
     gap: 0.45rem;
 }
 
 .footer-social ul li a:hover {
-    color: var(--text-primary);
+    color: var(--text-1st-color);
 }
 
 .footer-acknowledgements {
     font-size: 0.8rem;
-    color: var(--text-secondary);
+    color: var(--text-2nd-color);
     letter-spacing: 0.03em;
 }
 
@@ -435,7 +439,7 @@ p {
         left: 0;
         width: 260px;
         height: 100vh;
-        background-color: #141414;
+        background-color: var(--bg-color);
         border-right: 1px solid var(--border-color);
         padding: 5rem 2rem 2rem;
         transform: translateX(-100%);
