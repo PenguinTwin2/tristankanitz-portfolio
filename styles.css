@@ -32,6 +32,16 @@ body {
     padding-left: 250px;
 }
 
+.fa-brands {
+    height: auto;
+    width: 20px;
+}
+
+.fa-solid {
+    height: auto;
+    width: 20px;
+}
+
 
 /* ===== Sidebar Layout ===== */
 
@@ -105,8 +115,8 @@ main {
 .hero img {
     display: block;
     margin: 1rem auto;
-    width: 25%;
-    max-width: 200px;
+    height: auto;
+    width: 200px;
     border-radius: 50%;
     border: 3px solid var(--accent-color);
 }
