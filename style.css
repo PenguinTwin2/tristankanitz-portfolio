@@ -4,8 +4,8 @@
 :root {
     --bg-color: #111111;
     --card-bg-color: #181818;
-    --table-header-bg-color: #1c1c1c;
-    --table-row-alt-color: #151515;
+    --table-bg-color: #1c1c1c;
+    --table-alt-color: #151515;
     --text-1st-color: #f0f0f0;
     --text-2nd-color: #999999;
     --accent-color: #ffffff;
@@ -138,13 +138,13 @@ main {
 }
 
 /* Constrain standard page content to site max-width while allowing hero-banner to go full-width */
-main > *:not(.hero-banner) {
+/* main > *:not(.hero-banner) {
     max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 2rem;
     padding-right: 2rem;
-}
+} */
 
 /* ==========================================================================
    5. Homepage Full-Screen Hero Banner
@@ -242,13 +242,27 @@ p {
     color: var(--text-2nd-color);
 }
 
+/* Full-bleed section bands */
 .about-section,
 .music-section,
 .contact-section {
-    /* margin: 2rem 0; */
-    /* rem = Relative to font-size of the root element (the default font size) */
-    padding: 2rem 2rem 1rem;
+    width: 100%;
     background-color: var(--card-bg-color);
+    padding: 4rem 0;
+    /* border-top: 1px solid var(--border-color); */
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Constrain all direct children inside the sections to the 1100px grid */
+.about-section > *,
+.music-section > *,
+.contact-section > * {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    box-sizing: border-box;
 }
 
 /* About Layout with Portrait */
@@ -257,7 +271,7 @@ p {
     grid-template-columns: 280px 1fr;
     gap: 2.5rem;
     align-items: start;
-    margin: 1rem 0;
+    /* margin: 1rem 0; */
 }
 
 .about-portrait img {
@@ -265,7 +279,7 @@ p {
     height: auto;
     border-radius: 4px;
     border: 1px solid var(--border-color);
-    filter: grayscale(15%);
+    /* filter: grayscale(15%); */
 }
 
 .resume-link {
@@ -286,9 +300,10 @@ p {
 .table-responsive {
     width: 100%;
     overflow-x: auto;
-    margin: 1.5rem 0;
+    /* margin: 1.5rem 0; */
     border: 1px solid var(--border-color);
-    border-radius: 4px;
+    border-radius: 10px;
+    background-color: var(--table-bg-color);
 }
 
 .works-table {
@@ -306,7 +321,7 @@ p {
 }
 
 .works-table th {
-    background-color: var(--table-header-bg-color);
+    background-color: var(--table-bg-color);
     font-family: var(--font-body);
     font-size: 0.75rem;
     text-transform: uppercase;
@@ -320,7 +335,7 @@ p {
 }
 
 .works-table tbody tr:nth-child(odd) {
-    background-color: var(--table-row-alt-color);
+    background-color: var(--table-alt-color);
 }
 
 .works-table tbody tr:hover {
@@ -365,7 +380,7 @@ p {
     display: flex;
     flex-direction: column;
     gap: 0.85rem;
-    margin: 1rem 0;
+    /* margin: 1rem; */
 }
 
 .contact-links li a {
@@ -384,7 +399,7 @@ p {
    9. Footer (Social Links & Acknowledgements)
    ========================================================================== */
 .site-footer {
-    border-top: 1px solid var(--border-color);
+    /* border-top: 1px solid var(--border-color); */
     padding: 3.5rem 2rem;
     margin-top: auto;
 }
